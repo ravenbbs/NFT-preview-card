@@ -1,0 +1,161 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--very-dark-blue-main);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+}
+
+:root{
+--soft-blue: hsl(215, 51%, 70%);
+--cyan: hsl(178, 100%, 50%);
+--very-dark-blue-main: hsl(217, 54%, 11%);
+--very-dark-blue-card: hsl(216, 50%, 16%);
+--very-dark-blue-line: hsl(215, 32%, 27%);
+--white: hsl(0, 0%, 100%);
+}
+
+.main{
+  margin-top: 9.5vh;
+}
+
+.main__container{
+  display: flex;
+  border-radius:16px ;
+  width: 320px;
+  height: 540px;
+  flex-direction: column;
+  padding: 24px 20px;
+  background-color: var(--very-dark-blue-card);
+}
+
+.main__img{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img{
+  width: 278px;
+  border-radius: 10px;
+
+}
+.img--active{
+  position: absolute;
+  padding: 115px;
+  background-color: rgba(0, 255, 255, 0.415);
+  opacity: 0;
+  transition: 0.5s;
+}
+.main__description{
+  text-align: left;
+}
+
+.main__title{
+  font-size: 22px;
+  font-weight: 600;
+  margin: 20px 0 14px 0 ;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.main__paragraph{
+  font-size: 16px;
+  color: var(--soft-blue);
+}
+
+.main__content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.main__price{
+  font-size: 14px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100px;
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.main__clock{
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 90px;
+  color: var(--soft-blue);
+}
+
+.main__footer{
+  border-top: 1px solid var(--soft-blue);
+  padding-top: 20px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer__img{
+  width: 32px;
+  border-radius: 50%;
+  outline: 1px solid var(--very-dark-blue-line);
+  cursor: pointer;
+}
+
+.footer__credits{
+  font-size: 15px;
+  color: var(--soft-blue);
+  font-weight: 500;
+}
+
+.footer__credits--active{
+  color: var(--white);
+  cursor: pointer;
+}
+
+.footer__credits--active:hover{
+  color: var(--cyan);
+  transition: 0.5s;
+}
+
+.main__title:hover{
+  color: var(--cyan);
+  transition: 0.5s;
+}
+
+.img--active:hover{
+  opacity: 1;
+}
+
+@media screen and (min-width:768px){
+  .main{
+    margin-top: 18vh;
+  }
+  .main__container{
+    width: 350px;
+    height: 600px;
+  }
+  .img{
+    width: 310px;
+    border-radius: 10px;
+  }
+  .main__content{
+    height: 80px;
+  }
+  .img--active{
+    padding: 130px;
+  }
+
+}
